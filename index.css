@@ -6,9 +6,10 @@ body {
 .board {
     position: relative;
     top: 25%;
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 250px;
     margin: auto;
+    overflow: hidden;
 }
 
 .fondo {
@@ -18,7 +19,6 @@ body {
 
 .star {
     position: absolute;
-    top: -50px;
     width: 100%;
 }
 
@@ -55,10 +55,10 @@ span{
 .avatar {
     width: 33px;
     height: 33px;
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: 33px;
     left: 10%;
-    box-shadow: 0px 0px .5em 2px #fff;
+    box-shadow: 0px 0px 0.5em 2px #fff;
 }
 
 .saltar {
@@ -67,24 +67,22 @@ span{
 
 @keyframes saltar {
     0%{
-        bottom: 0%;
+        bottom: 33px;
+        left: 10%;
         transform: rotate(0deg);
     }
     50% {
-        bottom: 30%;
+        bottom: 150px;
+        left: 15%;
         transform: rotate(180deg);
     }
     100%{
-        bottom: 0%;
+        bottom: 33px;
+        left: 10%;
         transform: rotate(360deg);
     }
 }
 
-.botones {
-    position: absolute;
-    width: 100%;
-    bottom: -40px;
-}
 
 #saltar {
     font-size: 1.2em;
@@ -103,19 +101,19 @@ span{
 }
 
 .trampas {
-    position: absolute;
+    position: relative;
     width: 35px;
     height: 35px;
-    right: -40px;
-    bottom: 5%;
+    left: 100%;
+    bottom: 30%;
 }
 
 .trampas-2 {
-    position: absolute;
+    position: relative;
     width: 35px;
     height: 35px;
-    right: -40px;
-    bottom: 30%;
+    left: 100%;
+    bottom: 75%;
 }
 
 .atacar {
@@ -124,42 +122,18 @@ span{
 
 @keyframes atacar {
     0% {
-        right: -30%;
+        left: 100%;
         transform: rotate(0deg);
     }
 
     100% {
-        right: 130%;
+        left: 0%;
         transform: rotate(-560deg);
     }
 }
 
-@media (min-width: 430px) {
-    .fondo {
-        height: 250px;
-    }
-    .img-fondo {
-        height: 250px;
-    }
+@media (min-width: ) {
+    
 }
 
-@media (min-width: 500px) {
-    .fondo {
-        height: 300px;
-    }
-    .img-fondo {
-        height: 300px;
-    }
-}
 
-@media (min-width: 550px) {
-    .fondo {
-        height: 350px;
-    }
-    .img-fondo {
-        height: 350px;
-    }
-    .board {
-        top: 20%;
-    }
-}

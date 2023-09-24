@@ -6,12 +6,13 @@ const atacarup = document.querySelector(".trampas-2");
 const starGame = document.querySelector("#btn_play");
 const saltar = document.querySelector("#saltar");
 const star = document.querySelector("#star");
+const dom = document.querySelector("body");
 
 mostrarAnimacion();
 comenzarJuego();
 
 function mostrarAnimacion(){
-    saltar.addEventListener("click", ()=> {
+    dom.addEventListener("keyup", ()=> {
         bobEsponja.classList.add("saltar"),
         bobEsponja.addEventListener("animationend", ()=> {
             bobEsponja.classList.remove("saltar");
@@ -20,13 +21,17 @@ function mostrarAnimacion(){
 }
 
 function comenzarJuego() {
-    star.addEventListener("click", ()=> {
+    document.addEventListener("DOMContentLoaded", ()=> {
         atacar.classList.add("atacar"),
         atacar.addEventListener("animationend", ()=> {
             atacar.classList.remove("atacar"),
-            atacarup.classList.add("atacar");
+            atacarup.classList.add("atacar"),
+            atacarup.addEventListener("animationend", ()=> {
+                atacarup.classList.remove("atacar");
+            });
         });
     });
 }
+
 
 
