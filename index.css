@@ -1,0 +1,165 @@
+
+body {
+    height: 100vh;
+    background-color: rgba(216, 203, 132, 0.671);
+}
+.board {
+    position: relative;
+    top: 25%;
+    width: 400px;
+    height: 600px;
+    margin: auto;
+}
+
+.fondo {
+    width: 100%;
+    height: 220px;
+}
+
+.star {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+}
+
+.star button {
+    display: block;
+    margin: auto;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.img-fondo {
+    height: 220px;
+}
+
+.score {
+    position: absolute;
+    top: 0px;
+}
+
+.score h1,span {
+    color: #fff;
+}
+h1 {
+    margin: 0;
+}
+span{
+    font-size: 2em;
+}
+
+.avatar {
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    box-shadow: 0px 0px .5em 2px #fff;
+}
+
+.saltar {
+    animation: saltar 0.5s cubic-bezier(0.81, 0.78, 0.62, 0.65);
+}
+
+@keyframes saltar {
+    0%{
+        bottom: 0%;
+        transform: rotate(0deg);
+    }
+    50% {
+        bottom: 30%;
+        transform: rotate(180deg);
+    }
+    100%{
+        bottom: 0%;
+        transform: rotate(360deg);
+    }
+}
+
+.botones {
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+}
+
+#saltar {
+    font-size: 1.2em;
+    background-color: #e2b155;
+    display: block;
+    margin: auto;
+    width: 50px;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#saltar:hover {
+    box-shadow: 0px 0px .5em 2px #000;
+    background-color: #eca02c;
+}
+
+.trampas {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: -40px;
+    bottom: 5%;
+}
+
+.trampas-2 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: -40px;
+    bottom: 30%;
+}
+
+.atacar {
+    animation: atacar 1s linear;
+}
+
+@keyframes atacar {
+    0% {
+        right: -30%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        right: 130%;
+        transform: rotate(-560deg);
+    }
+}
+
+@media (min-width: 430px) {
+    .fondo {
+        height: 250px;
+    }
+    .img-fondo {
+        height: 250px;
+    }
+}
+
+@media (min-width: 500px) {
+    .fondo {
+        height: 300px;
+    }
+    .img-fondo {
+        height: 300px;
+    }
+}
+
+@media (min-width: 550px) {
+    .fondo {
+        height: 350px;
+    }
+    .img-fondo {
+        height: 350px;
+    }
+    .board {
+        top: 20%;
+    }
+}
